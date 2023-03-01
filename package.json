@@ -1,0 +1,37 @@
+{
+	"name": "gamemod-backend",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {
+		"start": "ts-node ./src/server.ts",
+		"fill-database": "ts-node scripts/fillDatabase.ts",
+		"delete-database": "ts-node scripts/clearDatabase.ts",
+		"start-release": "node dist/src/server.js",
+		"dev": "nodemon --watch 'src/**/*.ts' --ignore 'src/**/*.test.ts' --exec 'ts-node' ./src/server.ts",
+		"build": "tsc -p ./tsconfig.release.json",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/express": "^4.17.15",
+		"@types/node": "^18.11.18",
+		"@typescript-eslint/eslint-plugin": "^5.48.2",
+		"@typescript-eslint/parser": "^5.48.2",
+		"eslint": "^8.32.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-import": "^2.27.5",
+		"nodemon": "^2.0.20",
+		"prettier": "^2.8.3",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.9.4"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"dotenv": "^16.0.3",
+		"express": "^4.18.2",
+		"mongoose": "^7.0.0"
+	}
+}
